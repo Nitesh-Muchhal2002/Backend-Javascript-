@@ -62,7 +62,7 @@ userSchema.pre("save", async function (next) {
  }
 
  userSchema.methods.generateAccessToken = function () {
-    jwt.sign(
+   return   jwt.sign(
         {
             _id:this._id,
             email:this.email,
@@ -77,7 +77,7 @@ userSchema.pre("save", async function (next) {
  }
 
  userSchema.methods.generateRefreshToken = function () {
-    jwt.sign(
+   return  jwt.sign(
         {
             _id:this._id,
          
