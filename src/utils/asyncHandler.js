@@ -1,7 +1,9 @@
 
 const asyncHandler=(requestHandler)=>{
    return (req,res,next)=>{
-    Promise.resolve(requestHandler(req,res,next)).
+    Promise.resolve(requestHandler(req,res,next)). 
+    //requesthandler is the actual route handler
+    //that handles a specific HTTP request
     catch((err)=>next(err))
    }
 }
